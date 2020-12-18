@@ -1,35 +1,19 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Text, Alert,TouchableOpacity } from "react-native";
-import { Button, ListItem, Icon } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
+import { View, ScrollView,StyleSheet } from "react-native";
+import Subdirector_Titulo from "../../Components/Subdirector/Subdirector/Subdirector_Titulo";
+import Subdirector_Boton from "../../Components/Subdirector/Subdirector/Subdirector_Boton";
+import Subdirector_Categorias from "../../Components/Subdirector/Subdirector/Subdirector_Categorias";
+
 
 export default function Subdirector() {
-  const navigation = useNavigation();
+  
   return (
-    <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>GESTIONAR CATEGORIAS</Text>
-
-      <View style={styles.viewBtn}>
-        <Button
-          title="Agregar Categoria"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-categoria")}
-        />
-      </View>
-      <Text > {"\n"} </Text>
-      {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => alertItemName(item)}>
-       <ListItem key={i} bottomDivider>
-          <Icon name={item.icon} type="material-community" />
-          <ListItem.Content>
-            <ListItem.Title>{item.title}</ListItem.Title>
-          </ListItem.Content>
-          <ListItem.Chevron />
-        </ListItem>
-        </TouchableOpacity>
-      ))}
-    </ScrollView>
+    <View style={styles.viewBody}>
+    <Subdirector_Titulo/> 
+    <Subdirector_Boton/>
+    <Subdirector_Categorias/>
+  
+  </View>    
   );
 }
 
@@ -44,48 +28,6 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30
   },
-  textTitle: {
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: "center",
-    fontSize: 20,
-    color:"maroon",
-    fontWeight: "bold"
-  },
-  btnAddMaestro: {
-    marginBottom: 5
-  },
-  btnStyle: {
-    backgroundColor: "#CA6F1E"
-  },
-  btnContainer: {
-    width: "80%"
-  },
-  viewBtn: {
-    flex: 6,
-    alignItems: "center"
-  }
+ 
 });
 
-const list = [
-  {
-    title: "Ciclismo Ruta 1",
-    icon: "bike"
-  },
-  {
-    title: "Brigada de Ecología 2",
-    icon: "biathlon"
-  },
-  {
-    title: "Taller de lectura 3",
-    icon: "book-open-variant"
-  },
-  {
-    title: "Brigada de Rescate 4",
-    icon: "hospital-box"
-  },
-  {
-    title: "Basquet ball 5",
-    icon: "tennis-ball"
-  }
-];
