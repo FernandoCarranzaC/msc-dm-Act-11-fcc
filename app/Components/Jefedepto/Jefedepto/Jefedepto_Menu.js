@@ -3,42 +3,27 @@ import { StyleSheet, View, ScrollView, Text,Image } from "react-native";
 import { Button, ListItem, Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Estudiante_Menu() {
+export default function Jefedepto_Menu() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
       
-      <View style={styles.viewBtn}>
-      
      
-    </View>
      <View style={styles.viewBtn}>
-       <Button
-         title="Consultar Actividades"
-         buttonStyle={styles.btnStyle}
-         containerStyle={styles.btnContainer}
-         onPress={() => navigation.navigate("constulta-Actividad")}
-       />
-     
-    
-      
-        <Button
-          title="Registrarse en Actividad"
+     <Button
+          title="Gestionar Personal"
           buttonStyle={styles.btnStyle}
           containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-RegistroA")}
+          onPress={() => navigation.navigate("gestion-personal")}
         />
-      
-      
      
-     
-     
-        <Button
-          title="Actividades Cursadas"
+     <Button
+          title="Gestionar Actividades"
           buttonStyle={styles.btnStyle}
           containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("actividad-Cursada")}
+          onPress={() => navigation.navigate("gestion-actividad")}
         />
+      
       </View>
     </ScrollView>
   );
@@ -58,13 +43,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     fontWeight: "bold",
-    color:"#2980B9"
+    color:"green"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#00BCD4"
+    backgroundColor: "#48C9B0"
   },
   btnContainer: {
     width: "70%",
@@ -74,8 +59,6 @@ const styles = StyleSheet.create({
     flex: 6,
     alignItems: "center"
   },
-
-  
   
   photo: {
     height: 140,

@@ -1,71 +1,18 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Text } from "react-native";
-import { Button, ListItem, Icon } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
+import { View } from "react-native";
+import Instructor_Titulo from "../../Components/Instructor/Instructor/Instructor_Titulo";
+import Instructor_Imagen from "../../Components/Instructor/Instructor/Instructor_Imagen";
+import Instructor_Menu from "../../Components/Instructor/Instructor/Instructor_Menu";
 
-export default function Intructor() {
-  const navigation = useNavigation();
-  return (
-    <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>Gestion Instructor</Text>
+export default function Instructor() {
 
-      <View style={styles.viewBtn}>
-        <Button
-          title="Cursos Asignados"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("cursos-instructor")}
-        />
-      </View>
-      
-      <Text ></Text>
-      <View style={styles.viewBtn}>
-        <Button
-          title="Listas de Asistencia"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("asistencia-instructor")}
-        />
-      </View>
-      <Text ></Text>
-      <View style={styles.viewBtn}>
-       <Button
-         title="Califica Alumnos"
-         buttonStyle={styles.btnStyle}
-         containerStyle={styles.btnContainer}
-         onPress={() => navigation.navigate("calificacion-instructor")}
-       />
-      </View>
-    </ScrollView>
-  );
+  return(
+    <View>
+      <Instructor_Titulo/>
+      <Instructor_Imagen/>
+      <Instructor_Menu/>
+    </View>
+
+   
+    );
 }
-const styles = StyleSheet.create({
-  viewBody: {
-    marginLeft: 0,
-    marginRight: 0
-  },
-  division:{
-    fontSize: 5,
-  },
-  textTitle: {
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: "center",
-    fontSize: 30,
-    fontWeight: "bold",
-    color:"#B9770E"
-  },
-  btnAddMaestro: {
-    marginBottom: 5
-  },
-  btnStyle: {
-    backgroundColor: "#D4AC0D"
-  },
-  btnContainer: {
-    width: "70%"
-  },
-  viewBtn: {
-    flex: 6,
-    alignItems: "center"
-  }
-});

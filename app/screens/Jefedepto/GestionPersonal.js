@@ -1,40 +1,19 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Text, Alert,TouchableOpacity } from "react-native";
-import { Button, ListItem, Icon } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
+import { View, ScrollView,StyleSheet } from "react-native";
+import GestPers_Titulo from "../../Components/Jefedepto/GestPers/GestPers_Titulo";
+import GestPers_Boton from "../../Components/Jefedepto/GestPers/GestPers_Boton";
+import GestPers_ListPers from "../../Components/Jefedepto/GestPers/GestPers_ListPers";
 
 export default function GestionPersonal() {
-  const navigation = useNavigation();
+  
   return (
-    <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>GESTIONAR PERSONAL</Text>
-
-      <View style={styles.viewBtn}>
-        <Button
-          title="Agregar Personal"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-personal")}
-        />
-      </View>
-      <Text > {"\n"} </Text>
-      {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => alertItemName(item)}>
-       <ListItem key={i} bottomDivider>
-          <Icon name={item.icon} type="material-community" />
-          <ListItem.Content>
-            <ListItem.Title>{item.title}</ListItem.Title>
-          </ListItem.Content>
-          <ListItem.Chevron />
-        </ListItem>
-        </TouchableOpacity>
-      ))}
-    </ScrollView>
+   <View style={styles.viewBody}>
+     <GestPers_Titulo/> 
+     <GestPers_Boton/>
+    <GestPers_ListPers/>
+   
+   </View>
   );
-}
-
-const alertItemName = (item) => {
-  Alert.alert(item.title+"\n actualizar  borrar ")
 }
 
 
@@ -44,36 +23,6 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30
   },
-  textTitle: {
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: "center",
-    fontSize: 20,
-    color:"green",
-    fontWeight: "bold"
-  },
-  btnAddMaestro: {
-    marginBottom: 5
-  },
-  btnStyle: {
-    backgroundColor: "#48C9B0"
-  },
-  btnContainer: {
-    width: "80%"
-  },
-  viewBtn: {
-    flex: 6,
-    alignItems: "center"
-  }
+
 });
 
-const list = [
-  {
-    title: "Nombre Persona 1",
-    icon: "account"
-  },
-  {
-    title: "Nombre Persona 2",
-    icon: "account-outline"
-  }
-];

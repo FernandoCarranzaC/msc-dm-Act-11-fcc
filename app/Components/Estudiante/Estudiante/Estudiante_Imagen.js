@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   photo: {
-    height: 140,
-    width: 140,
-    marginBottom: 20,
-    marginTop: 20,
+    height: 200,
+    width: 200,
+    marginBottom: 30,
+    marginTop: 0,
    
   }
 });

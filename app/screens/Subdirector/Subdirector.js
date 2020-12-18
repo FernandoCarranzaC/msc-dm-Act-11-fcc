@@ -69,12 +69,23 @@ const styles = StyleSheet.create({
 
 const list = [
   {
-    title: "Nombre categoria 1",
-    icon: "account"
+    title: "Ciclismo Ruta 1",
+    icon: "bike"
   },
   {
-    title: "Nombre categoria 2",
-    icon: "account-outline"
+    title: "Brigada de Ecología 2",
+    icon: "biathlon"
   },
-  
+  {
+    title: "Taller de lectura 3",
+    icon: "book-open-variant"
+  },
+  {
+    title: "Brigada de Rescate 4",
+    icon: "hospital-box"
+  },
+  {
+    title: "Basquet ball 5",
+    icon: "tennis-ball"
+  }
 ];

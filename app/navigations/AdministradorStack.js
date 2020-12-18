@@ -1,10 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Administrador from "../screens/Administrador/Administrador";
-import GestionDepto from "../screens/Administrador/GestionDepto";
-import GestionJefe from "../screens/Administrador/GestionJefe";
-import addDepto from "../screens/Administrador/addDepto";
-import addJefe from "../screens/Administrador/addJefe";
+import Administrador from "..//screens/Administrador/Administrador";
+import GestionDepto from "..//screens/Administrador/GestionDepto";
+import GestionJefe from "..//screens/Administrador/GestionJefe";
+import addDepto from "..//screens/Administrador/addDepto";
+import addJefe from "..//screens/Administrador/addJefe";
 
 
 const Stack = createStackNavigator();
